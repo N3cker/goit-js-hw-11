@@ -1,14 +1,14 @@
 {
   "name": "parcel-project-template",
   "version": "2.0.0",
-  "homepage": "https://n3cker.github.io/goit-js-hw-09/",
+  "homepage": "https://n3cker.github.io/goit-js-hw-11/",
   "scripts": {
     "start": "parcel src/index.html",
-    "build": "parcel build src/*.html --public-url /goit-js-hw-09/"
+    "build": "parcel build src/*.html --public-url /goit-js-hw-11/"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/N3cker/goit-js-hw-09.git"
+    "url": "git+https://github.com/N3cker/goit-js-hw-11.git"
   },
   "keywords": [],
   "author": "Alexander Repeta <alexander.repeta@gmail.com>",

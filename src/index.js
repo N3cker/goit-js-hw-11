@@ -1,4 +1,4 @@
-import './sass/main.css';
+import './sass/main.scss';
 import { Notify } from 'notiflix';
 import SimpleLightbox from 'simplelightbox';
 import 'simplelightbox/dist/simple-lightbox.min.css';
@@ -15,7 +15,7 @@ const perPage = 40
 
 refs.searchForm.addEventListener('submit', onSearchForm)
 refs.btnLoad.addEventListener('click', onBtnLoad)
-//simpleLightBox = new Simplelightbox('.gallery a')
+
 
 function onSearchForm(event) {
   event.preventDefault()
@@ -36,7 +36,6 @@ function onSearchForm(event) {
         Notify.failure('Sorry, there are no images matching your search query. Please try again.')
       } else {
         createCollection(data.hits)
-        //simpleLightBox = new SimpleLightbox('.gallery a').refresh()
         simpleLightBox.refresh()
         Notify.success(`Hooray! We found ${data.totalHits} images.`)
 
@@ -52,12 +51,10 @@ function onSearchForm(event) {
 
 function onBtnLoad() {
   page += 1
-  //simpleLightBox.destroy()
 
   apiService(query, page, perPage)
     .then(({ data }) => {
       createCollection(data.hits)
-      //simpleLightBox = new SimpleLightbox('.gallery a')
       simpleLightBox.refresh()
 
       const totalPages = Math.floor(data.totalHits / perPage)
